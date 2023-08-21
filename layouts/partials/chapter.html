@@ -1,0 +1,132 @@
+{{ with .Site.Data.chapter}}
+{{ if .enable}}
+
+<div class="container" >
+<h2 style="text-align:center;">Chapter Info</h2>
+<h3>What is included in the Program</h3>
+<ul>
+  <li>Net Love partners with Recycleballs.org to recycle used tennis balls.</li>
+  <li>Once an application has been approved, a setup package will be sent to you
+    consisting of a 10 pack of bins, posters, and instructions. These bins come with
+    pre-attached, prepaid UPS shipping labels.
+  </li> 
+  <li>Each bin holds exactly 200 balls. A 10 pack is good for 2000 balls.</li>
+  <li>You will receive a tax deduction for every ball shipped to us. Many of our partner facilities claim .30 – .40 per ball.</li>
+  <li>All bins are tracked and you will receive replacement bins (10 pack) automatically
+    after the 5th bin is returned.</li>
+</ul>
+
+ <h3>What are the benefits of this program</h3>
+<ul>
+  <li>For your players - court-side convenience (if you place bins at each court).</li>
+  <li>For your organization - a green “feel good” that players will love.</li>
+  <li>For the environment - A sustainable solution that reduces landfill waste.</li>
+  <li> For your bottom line-  a significant potential tax benefit.</li>
+</ul> 
+
+<h3>How can we get started?</h3>
+<ul>
+  <li>Simply fill in the form below.</li>
+  <li> Chapters can start this program on an annual basis with Net Love as a sponsor
+    for the first year. After the first year, if Net Love has funds, Net Love would continue as sponsor. Else it would be best to acquire a new sponsor to fund and extend this program. Net Love and Recycleballs can give you tips to easily find a sponsor.
+    </li>
+</ul>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="contact-form">
+          <h2>Chapter Lead Application Form</h2>
+
+          <form name="volunteer-form" class="row" accept-charset="utf-8" action="https://formspree.io/f/mjvzdpov" method="post">
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="full-name" name="Name" placeholder="First and Last Name" required="">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" id="email" required="" name="email" placeholder="Your Email">
+            </div>
+            
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number (optional)">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="location" required="" name="location" placeholder="Address, Street, City, State and Zipcode">
+            </div>
+
+
+            <div class="form-group">
+              <label for="choice">This best describes me: </label>
+              <select name="choice" id="choice">
+                <option value="" selected="" disabled="">Choose</option>
+                <option value="a">An owner, manager or board member</option>
+                <option value="b">A tennis director, pro, coach, or teacher</option>
+                <option value="c">A High School or University level player</option>
+                <option value="d">A tennis player</option>
+              </select>
+            </div>
+
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="chapter-name" name="chapterName" placeholder="Chapter Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="chapter-address" name="chapterAddress" placeholder="Chapter Address" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="chapter-indoor" name="chapterIndoor" placeholder="How many Indoor Courts (enter zero if none or N/A)" required="">
+            </div>
+            
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="chapter-outdoor" name="chapterOutdoor" placeholder="How many Outdoor Courts (enter zero if none or N/A)" required="">
+            </div>
+            
+
+
+            <div class="col-md-12">
+              <textarea class="form-control" id="message" rows="8" name="message"
+                placeholder="Tell us about yourself…" required=""></textarea>
+            </div>
+
+
+            <div class="form-group">
+              <label for="choice">How did you hear about us? (optional): </label>
+              <select name="choice" id="choice">
+                <option value="" selected="" disabled="">Choose</option>
+                <option value="1">Social Media</option>
+                <option value="3">Google Search</option>
+                <option value="5">Tennis Coach (please tell us below)</option>
+                <option value="7">Tennis Club (please tell us below)</option>
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" id="why" rows="8" name="Additional Comments"
+                placeholder="Why do you want to start a new chapter? (optional)"></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" required>
+                <label class="form-check-label" for="gridCheck">
+                  I agree that my submitted data is being collected and stored.
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <button type="submit" class="btn btn-primary" id="contact-form-button" formtarget="_blank">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p id="contact-form-status"></p>
+
+{{end}}
+{{end}}

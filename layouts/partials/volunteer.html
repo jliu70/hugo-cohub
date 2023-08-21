@@ -1,0 +1,67 @@
+{{ with .Site.Data.volunteer}}
+{{ if .enable}}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="contact-form">
+          <h2>Volunteer Application Form</h2>
+
+          <form name="volunteer-form" class="row" accept-charset="utf-8" action="https://formspree.io/f/xbjbepgj" method="post">
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="full-name" name="Name" placeholder="First and Last Name" required="">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" id="email" required="" name="email" placeholder="Your Email">
+            </div>
+            
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number (optional)">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="location" name="location" placeholder="City and State (optional)">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" id="message" rows="8" name="message"
+                placeholder="Tell us about yourself…" required=""></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="choice">Volunteer service you prefer (optional): </label>
+              <select name="choice" id="choice">
+                <option value="" selected="" disabled="">Choose</option>
+                <option value="1">Community Outreach</option>
+                <option value="3">Social Media Outreach</option>
+                <option value="5">Tennis ball delivery and collection</option>
+                <option value="7">Other (please tell us below)</option>
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" id="why" rows="8" name="Additional Comments"
+                placeholder="Why do you want to be part of the team? (optional)"></textarea>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" required>
+                <label class="form-check-label" for="gridCheck">
+                  I agree that my submitted data is being collected and stored.
+                </label>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <button type="submit" class="btn btn-primary" id="contact-form-button" formtarget="_blank">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p id="contact-form-status"></p>
+
+{{end}}
+{{end}}

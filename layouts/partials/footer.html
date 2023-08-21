@@ -49,7 +49,7 @@
 {{ "<!-- Non Critical CSS -->" | safeHTML }}
 {{$style :=  resources.Get "scss/non-critical.scss" | resources.ToCSS | resources.Minify }}
 <link href="{{ $style.Permalink }}" rel="stylesheet" />
-<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.APIkey }}&libraries=geometry">
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.Map.APIkey }}&libraries=geometry">
 </script>
 {{ "<!-- VENDOR JS -->" | safeHTML }}
 <script src="{{"vendor/jQuery/jquery.min.js" | absURL }}"></script>
@@ -62,4 +62,46 @@
 <!-- {{ $formhandler := resources.Get "js/formhandler.js" | minify}} 
 <script src="{{ $formhandler.Permalink}}"></script> -->
 {{ $script := resources.Get "js/script.js" | minify}} 
-<script src="{{ $script.Permalink}}"></script>
+<script src="{{ $script.Permalink }}"></script>
+
+
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xeqwqnjw",
+    title: "Contact Us",
+    description: "We'll respond to your question or comment within 2 business days.",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        required: true,
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      description: {
+        backgroundColor: "#283fed"
+      },
+      button: {
+        backgroundColor: "#1898d9"
+      }
+    }
+  });
+</script>
